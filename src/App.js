@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
+import Post from './Post/component/Post'
 
 import './App.css';
 
 class App extends Component {
+  constructor (props) {
+    super (props);
+
+    this.state = {
+      posts: [
+        'I might be a post?'
+      ],
+    }
+  }
+
   render() {
     return (
-      <div >
-        <div className="panel panel-default">
-          <div className="panel-body">
-            Hello I am a post
-          </div>
-        </div>
+      <div>
+        { this.state.posts.map( (postBody, index) => {
+          return (
+            <Post key = {index} postBody={postBody} />
+            )
+          })
+        }
         <div className ="panel panel-default post-editor">
           <div className="panel-body">
             <textarea className="form-control post-editor-input"/>

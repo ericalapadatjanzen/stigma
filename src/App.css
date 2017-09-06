@@ -2,6 +2,10 @@
   margin: 1em 20%;
 }
 
+.post-body {
+    margin: 1em 20%;
+}
+
 .post-editor-button {
   margin-top: 0.3em;
   float: right;
@@ -10,5 +14,9 @@
 @media(max-width: 900px) {
   .post-editor {
     margin: 1em;
+  }
+
+  .post-body {
+    margin:1em;
   }
 }
